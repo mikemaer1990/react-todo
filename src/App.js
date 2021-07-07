@@ -11,6 +11,7 @@ function App() {
   const [status, setStatus] = useState("all");
   const [sortedTodos, setSortedTodos] = useState([]);
 
+  // Sort todos based on filter input
   useEffect(
     function handleFilter() {
       switch (status) {
@@ -27,7 +28,7 @@ function App() {
     },
     [setSortedTodos, todos, status]
   );
-
+  // Get localstorage todos if available
   const getLocalTodos = () => {
     if (!localStorage.getItem("todos")) {
       localStorage.setItem("todos", JSON.stringify([]));
@@ -36,10 +37,12 @@ function App() {
       setTodos(localTodos);
     }
   };
+  // Run once on launch
   useEffect(() => {
     getLocalTodos();
   }, []);
 
+  // Update localStorage todos when 'todos' is changed
   useEffect(
     function setLocalTodos() {
       localStorage.setItem("todos", JSON.stringify(todos));
