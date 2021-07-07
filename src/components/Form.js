@@ -31,12 +31,12 @@ export default function Form({
   // Return form component
   return (
     <form>
-      <div className="relative md:w-1/2 w-2/3 mx-auto flex">
+      <div className="relative lg:w-1/2 w-10/12 mx-auto flex">
         {/* Main input area */}
         <input
           value={inputText}
           onChange={handleInput}
-          className="focus:border-indigo-700 flex items-center focus:bg-indigo-100 rounded w-full pr-10"
+          className="focus:border-indigo-700 flex items-center focus:bg-indigo-100 rounded w-full pr-10 "
           type="text"
           name="todo"
           id="todo"

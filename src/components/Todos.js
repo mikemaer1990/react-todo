@@ -24,7 +24,7 @@ export default function Todos({ data, todos, setTodos }) {
       // If done -> line through and grey text
       className={`${
         data.done ? "text-gray-400 line-through " : ""
-      }bg-indigo-50 rounded flex mt-1 w-1/3 mx-auto transition`}
+      }bg-indigo-200  dark:bg-indigo-50 rounded flex mt-1 w-2/3 md:w-1/3 mx-auto transition`}
     >
       <li className="w-max p-2 truncate">{data.text}</li>
       {/* Complete button */}

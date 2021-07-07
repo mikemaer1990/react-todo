@@ -3,8 +3,10 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
-
+import SetDarkMode from "./components/SetDarkMode";
+import DarkModeButton from "./components/DarkModeButton";
 function App() {
+  SetDarkMode();
   // State mgmt
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
@@ -51,7 +53,8 @@ function App() {
   );
   // Return app
   return (
-    <div className="w-screen h-screen bg-gray-800 pt-24">
+    <div className="w-screen h-screen dark:bg-gray-800 bg-indigo-50 pt-24 transition duration-1000">
+      <DarkModeButton />
       {/* Display the form */}
       <Form
         inputText={inputText}
