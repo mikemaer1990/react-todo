@@ -5,7 +5,7 @@ import SetDarkMode from "./SetDarkMode";
 export default function DarkModeButton() {
   const [colorTheme, setColorTheme] = SetDarkMode();
   return (
-    <div className="absolute inset-0 left-2 top-2">
+    <div className="absolute inset-0 left-2 top-2 w-10 h-10">
       <span
         className="w-10 h-10 bg-indigo-800 rounded-full cursor-pointer text-white flex items-center justify-center transition"
         onClick={() => setColorTheme(colorTheme)}
